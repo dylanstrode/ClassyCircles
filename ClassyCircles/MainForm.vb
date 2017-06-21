@@ -4,9 +4,9 @@
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Circles(0) = New CCircle(50, 50, 20)
-        Circles(1) = New CCircle(150, 150, 30)
-        Circles(2) = New CCircle(250, 50, 40)
+        Circles(0) = New CCircle(50, 150, 10)
+        Circles(1) = New CCircle(250, 50, 30)
+        Circles(2) = New CCircle(150, 50, 50)
 
     End Sub
 
@@ -20,6 +20,15 @@
             Circle.Draw(g)
         Next
 
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
+        For Each Circle In Circles
+            Circle.Drop()
+        Next
+
+        Display.Refresh()
 
     End Sub
 End Class

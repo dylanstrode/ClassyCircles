@@ -25,7 +25,11 @@
 
     End Sub
 
+    Public Sub Drop()
 
+        YPosition += Diameter \ 10
+
+    End Sub
 
 
 

@@ -22,7 +22,9 @@ Partial Class MainForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Display = New System.Windows.Forms.PictureBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.Display, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -34,6 +36,10 @@ Partial Class MainForm
         Me.Display.Size = New System.Drawing.Size(607, 439)
         Me.Display.TabIndex = 0
         Me.Display.TabStop = False
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
         '
         'MainForm
         '
@@ -50,4 +56,5 @@ Partial Class MainForm
     End Sub
 
     Friend WithEvents Display As PictureBox
+    Friend WithEvents Timer1 As Timer
 End Class
